@@ -125,7 +125,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                   } `}
                 ref={main2Ref}
               >
-                The Wedding Of
+                The Wedding Talk Of
               </h5>
               <h1
                 className={`text-2xl md:text-3xl font-ovo t text-white uppercase fadeMain ${isMainInView ? "active" : ""
@@ -248,7 +248,6 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                   target="_blank"
                   className="cursor-pointer hover:bg-black text-sm rounded-full flex items-center gap-x-2 text-center font-legan mt-5 bg-[#4E4E4E] w-fit px-4 py-2 text-[#CCCCCC]"
                 >
-                  <FaInstagram /> {config.brideInstagram}
                 </Link>
               </div>
             </div>
