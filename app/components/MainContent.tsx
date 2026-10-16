@@ -2,12 +2,9 @@
 
 import { useState, useEffect, useRef } from "react";
 import { IoIosArrowUp } from "react-icons/io";
-import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import CountdownTimer from "./Countdown";
-import Form from "./Form";
-import WishesList from "./WishesList";
 import { config } from "@/lib/config";
 
 type WeddingScreenProps = {
@@ -55,26 +52,10 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
   const { ref: slide3Ref, inView: isSlide3InView } = useInView({
     threshold: 0.5,
   });
-
-  const { ref: slide4Ref, inView: isSlide4InView } = useInView({
-    threshold: 0.5,
-  });
   const { ref: slide5Ref, inView: isSlide5InView } = useInView({
     threshold: 0.5,
   });
   const { ref: slide6Ref, inView: isSlide6InView } = useInView({
-    threshold: 0.5,
-  });
-  const { ref: slide7Ref, inView: isSlide7InView } = useInView({
-    threshold: 0.5,
-  });
-  const { ref: slide8Ref, inView: isSlide8InView } = useInView({
-    threshold: 0.5,
-  });
-  const { ref: slide9Ref, inView: isSlide9InView } = useInView({
-    threshold: 0.5,
-  });
-  const { ref: slide10Ref, inView: isSlide10InView } = useInView({
     threshold: 0.5,
   });
   const { ref: endRef, inView: isEndInView } = useInView({
