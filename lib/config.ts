@@ -22,7 +22,7 @@ export const config = {
             "Default Street",
         googleMapsLink:
             process.env.NEXT_PUBLIC_WEDDING_RECEPTION_GOOGLE_MAPS ||
-            "https://maps.app.goo.gl/fQGiC37iEx6fcuNq8",
+            "https://maps.app.goo.gl/m9UQtkbDSyUCgy6f9",
     },
 
     rsvp: {
