@@ -342,7 +342,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
       {/* Audio */}
       <audio
         ref={audioRef}
-        src="/music/wedding_song.mp3"
+        src="/music/osg_AM_039.mp3"
         preload="auto"
       />
     </div>
