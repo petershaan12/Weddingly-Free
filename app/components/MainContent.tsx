@@ -195,7 +195,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
             <div
               className={`text-white h-screen flex items-end pb-16 px-12 snap-start `}
               style={{
-                backgroundImage: `url(/slide_2.jpg)`,
+                backgroundImage: `url(/slide-2.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -209,24 +209,14 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 <h1 className="text-xl md:text-3xl text-white  font-ovo">
                   {config.groom}
                 </h1>
-                <h3 className="font-thesignature text-2xl">About {config.groomNickName},</h3>
-                <p className="text-sm mt-5 font-legan text-[#CCCCCC]">
-                  {config.groomBio}
-                </p>
-                <Link
-                  href={`https://www.instagram.com/${config.groomInstagram}`}
-                  target="_blank"
-                  className="cursor-pointer hover:bg-black text-sm rounded-full flex items-center gap-x-2 text-center font-legan mt-5 bg-[#4E4E4E] w-fit px-4 py-2 text-[#CCCCCC]"
-                >
-                  <FaInstagram /> {config.groomInstagram}
-                </Link>
+                <h3 className="font-thesignature text-2xl">{config.groomNickName},</h3>
               </div>
             </div>
             {/* Slide 3 */}
             <div
               className="snap-start  text-white h-screen flex items-end pb-16 px-12 "
               style={{
-                backgroundImage: `url(/slide_3.jpg)`,
+                backgroundImage: `url(/slide-3.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -239,23 +229,14 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 <h1 className="text-xl md:text-3xl text-white  font-ovo">
                   {config.bride}
                 </h1>
-                <h3 className="font-thesignature text-2xl">About {config.brideNickName},</h3>
-                <p className="text-sm mt-5 font-legan text-[#CCCCCC]">
-                  {config.brideBio}
-                </p>
-                <Link
-                  href={`https://www.instagram.com/${config.brideInstagram}`}
-                  target="_blank"
-                  className="cursor-pointer hover:bg-black text-sm rounded-full flex items-center gap-x-2 text-center font-legan mt-5 bg-[#4E4E4E] w-fit px-4 py-2 text-[#CCCCCC]"
-                >
-                </Link>
+                <h3 className="font-thesignature text-2xl">{config.brideNickName},</h3>
               </div>
             </div>
             {/* Slide 4 */}
             <div
               className="snap-start  text-white h-screen pt-8 flex px-12 "
               style={{
-                backgroundImage: `url(/slide_4.jpg)`,
+                backgroundImage: `url(/slide-4.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -326,7 +307,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
             <div
               className="snap-start  text-white h-screen flex flex-col items-center px-12 "
               style={{
-                backgroundImage: `url(/slide_5.jpg)`,
+                backgroundImage: `url(/slide-5.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -348,23 +329,6 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                     day: "numeric",
                   })}
                 </h1>
-                {config.holyMatrimony.enabled && (
-                  <div className="mt-5 mx-auto flex flex-col items-center">
-                    <h3 className="uppercase font-ovo text-sm text-center mt-5 mb-2">
-                      Holy Matrimony <br /> {config.holyMatrimony.time}
-                    </h3>
-                    <p className="text-sm text-center  font-legan text-white">
-                      {config.holyMatrimony.place} <br /> {config.holyMatrimony.place_details}
-                    </p>
-                    <Link
-                      href={config.holyMatrimony.googleMapsLink}
-                      target="_blank"
-                      className="cursor-pointer hover:text-white/20 text-sm rounded-full flex items-center gap-x-2 text-center font-legan mt-5 bg-[#808080] w-fit px-4 py-2 text-white"
-                    >
-                      Google Maps
-                    </Link>
-                  </div>
-                )}
 
                 {config.weddingReception.enabled && (
                   <div className="mt-5 mx-auto flex  flex-col items-center">
@@ -389,7 +353,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
             <div
               className="snap-start  text-white h-screen flex flex-col items-center justify-end pb-16 px-12 "
               style={{
-                backgroundImage: `url(/slide_6.jpg)`,
+                backgroundImage: `url(/slide-6.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -400,101 +364,18 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                   }  fadeInMove flex items-center flex-col`}
               >
                 <h1 className="text-2xl text-center text-white  font-ovo">
-                  ALMOST TIME FOR OURCELEBRATION
+                  ALMOST TIME FOR OUR WEDDING TALK DAY
                 </h1>
                 {/* Countdown Timer */}
                 <CountdownTimer />
               </div>
             </div>
-            {/* Slide 7 */}
-            {config.livestreaming.enabled && (
-              <div
-                className="snap-start  text-white h-screen flex flex-col justify-between pt-16 pb-32 px-12 "
-                style={{
-                  backgroundImage: `url(/foto_1_samping.jpg)`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                <h1
-                  ref={slide7Ref}
-                  className={`text-2xl text-white  font-ovo fadeInMoveSlow ${isSlide7InView ? "active" : ""
-                    }`}
-                >
-                  JOIN OUR EXCLUSIVE LIVE STREAMING EVENT
-                </h1>
-
-                <div
-                  className={`mt-5 mx-auto flex flex-col fadeInMove ${isSlide7InView ? "active" : ""
-                    }`}
-                  ref={slide7Ref}
-                >
-                  <h3 className="uppercase font-ovo text-sm mt-5 mb-2">
-                    {new Date(config.eventDate).toLocaleDateString("en-US", {
-                      weekday: "long",
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                    <br /> {config.livestreaming.time}
-                  </h3>
-                  <p className="text-sm font-legan text-white">
-                    {config.livestreaming.detail}
-                  </p>
-                  <Link
-                    href={config.livestreaming.link}
-                    target="_blank"
-                    className="cursor-pointer hover:text-white/20 text-sm rounded-full flex items-center gap-x-2 text-center font-legan mt-5 bg-[#3B3B3B] w-fit px-6 py-2 text-white"
-                  >
-                    Join Live Streaming
-                  </Link>
-                </div>
-              </div>)}
-            {/* SLIDE 8 */}
-            {config.prewedding.enabled && (
-              <div
-                className="snap-start text-white h-screen flex flex-col justify-center pt-16 pb-16 px-8 "
-                style={{
-                  backgroundImage: `url(/slide_8.jpg)`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                <div
-                  ref={slide8Ref}
-                  className={`${isSlide8InView ? "active" : ""} fadeInMove `}
-                >
-                  <h1 className="text-3xl text-white  font-ovo text-center uppercase">
-                    Unveiling Our Prewedding Story
-                  </h1>
-                  <div
-                    className="mt-10 mx-auto w-full max-w-2xl relative"
-                    style={{ paddingBottom: "56.25%", height: 0 }}
-                  >
-                    <iframe
-                      className="absolute top-0 left-0 w-full h-full"
-                      src={`https://www.youtube.com/embed/${config.prewedding.link}?autoplay=1&mute=1&loop=1`}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-
-                  <div className="-mt-12 w-72 transform skew-x-6 drop-shadow">
-                    <p className="text-3xl font-thesignature text-white/80 ">
-                      {config.prewedding.detail}
-                    </p>
-                  </div>
-                </div>
-              </div>)}
-
-            {/* SLIDE 9 */}
+            {/* SLIDE 7 */}
             {config.rsvp.enabled && (
             <div
               className="snap-start text-white h-screen flex flex-col justify-center pt-16 pb-16 px-8"
               style={{
-                backgroundImage: `url(/slide_9.jpg)`,
+                backgroundImage: `url(/slide-7.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -515,11 +396,11 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
             </div>
             )}
 
-            {/* SLIDE 10 */}
+            {/* SLIDE 8 */}
             <div
               className="snap-start text-white h-screen flex flex-col justify-center pt-16 pb-16 px-8"
               style={{
-                backgroundImage: `url(/slide_9.jpg)`,
+                backgroundImage: `url(/slide-8.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -539,7 +420,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
             <div
               className="snap-start text-white h-screen flex flex-col justify-end pt-16 pb-16 px-12 "
               style={{
-                backgroundImage: `url(/slide_7.jpg)`,
+                backgroundImage: `url(/slide-9.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -564,9 +445,9 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
 
               <footer className="flex flex-col items-center mt-8">
                 <p className="text-[0.5rem] uppercase text-center">
-                  Created By Peter Shaan
+                  Made from forked free wedding template
                 </p>
-                <p className="text-xs">© All rights reserved by petershaan</p>
+                <p className="text-xs">© All rights reserved by the owner</p>
               </footer>
             </div>
           </>
