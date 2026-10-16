@@ -56,13 +56,13 @@ body {
   background-image: url(../public/slide1.1.JPG);
  }
  45% {
-  background-image: url(../public/hero2.JPG);
+  background-image: url(../public/slide1-1.JPG);
  }
   85% {
     background-image: url(../public/hero2.JPG);
   }
   100% {
-    background-image: url(../public/slide1.1.JPG);
+    background-image: url(../public/slide1-1.JPG);
   }
 }
 
