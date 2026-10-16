@@ -151,7 +151,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
           <>
             {/* Slide 1 */}
             <div
-              className="text-purple h-screen flex pt-12 p-5 px-12 snap-start"
+              className="text-white h-screen flex pt-12 p-5 px-12 snap-start"
               style={{
                 backgroundImage: `url(/slide1.1.JPG)`,
                 backgroundSize: "cover",
@@ -162,11 +162,11 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 ref={slide1Ref}
                 className={`${isSlide1InView ? "active" : ""} fadeInMove`}
               >
-                <h1 className="text-xl md:text-2xl font-ovo tracking-wide text-purple uppercase">
+                <h1 className="text-xl md:text-2xl font-ovo tracking-wide text-white uppercase">
                   {config.bibleVerse}
                 </h1>
 
-                <p className="text-sm mt-5 font-legan text-purple">
+                <p className="text-sm mt-5 font-legan text-white">
                   {config.bibleVerseContent}
                 </p>
               </div>
