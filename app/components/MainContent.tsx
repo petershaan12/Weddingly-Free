@@ -162,11 +162,11 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 ref={slide1Ref}
                 className={`${isSlide1InView ? "active" : ""} fadeInMove`}
               >
-                <h1 className="text-xl md:text-2xl font-ovo tracking-wide text-purple uppercase">
+                <h1 className="text-xl md:text-2xl font-ovo tracking-wide text-black uppercase">
                   {config.bibleVerse}
                 </h1>
 
-                <p className="text-sm mt-5 font-legan text-purple">
+                <p className="text-sm mt-5 font-legan text-black">
                   {config.bibleVerseContent}
                 </p>
 
