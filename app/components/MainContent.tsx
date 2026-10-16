@@ -162,7 +162,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 ref={slide1Ref}
                 className={`${isSlide1InView ? "active" : ""} fadeInMove`}
               >
-                <h1 className="text-xl md:text-2xl font-ovo tracking-wide text-white uppercase">
+                <h1 className="text-xl md:text-2xl font-ovo tracking-wide text-black uppercase">
                   {config.bibleVerse}
                 </h1>
 
@@ -319,12 +319,12 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 ref={endRef}
                 className={`${isEndInView ? "active" : ""} fadeInMove`}
               >
-                <h1 className="text-3xl text-white font-ovo text-center uppercase">
+                <h1 className="text-3xl text-black font-ovo text-center uppercase">
                   {config.thankyou}
                 </h1>
 
                 <div className="mt-5 mx-auto flex flex-col">
-                  <p className="text-sm font-legan text-white text-center">
+                  <p className="text-sm font-legan text-black text-center">
                     {config.thankyouDetail}
                   </p>
 
