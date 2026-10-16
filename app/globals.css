@@ -38,7 +38,7 @@ body {
 #backgroundWedding {
   background-size: cover;
   background-position: center;
-  background-image: url(../public/slide1.1.jpg);
+  background-image: url(../public/slide1.1.JPG);
   background-repeat: no-repeat;
   transition: 5s;
   animation-name: animate;
@@ -53,7 +53,7 @@ body {
 
 @keyframes animate {
  0% {
-  background-image: url(../public/slide1.1.jpg);
+  background-image: url(../public/slide1.1.JPG);
  }
  45% {
   background-image: url(../public/hero2.JPG);
@@ -62,7 +62,7 @@ body {
     background-image: url(../public/hero2.JPG);
   }
   100% {
-    background-image: url(../public/slide1.1.jpg);
+    background-image: url(../public/slide1.1.JPG);
   }
 }
 
