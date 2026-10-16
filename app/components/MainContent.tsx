@@ -75,7 +75,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
       <div
         className="md:flex justify-center hidden items-end pb-12 w-2/3 h-1/2 md:h-full"
         style={{
-          backgroundImage: `url(/hero.JPG)`,
+          backgroundImage: `url(/hero2.JPG)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -153,7 +153,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
             <div
               className="text-white h-screen flex pt-12 p-5 px-12 snap-start"
               style={{
-                backgroundImage: `url(/slide-1-1.jpg)`,
+                backgroundImage: `url(/slide1.1.JPG)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -162,11 +162,11 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 ref={slide1Ref}
                 className={`${isSlide1InView ? "active" : ""} fadeInMove`}
               >
-                <h1 className="text-xl md:text-2xl font-ovo tracking-wide text-white uppercase">
+                <h1 className="text-xl md:text-2xl font-ovo tracking-wide text-black uppercase">
                   {config.bibleVerse}
                 </h1>
 
-                <p className="text-sm mt-5 font-legan">
+                <p className="text-sm mt-5 font-legan text-black">
                   {config.bibleVerseContent}
                 </p>
 
@@ -268,7 +268,6 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                     <p className="text-sm text-center font-legan text-white">
                       {config.weddingReception.place}
                       <br />
-                      {config.weddingReception.place_details}
                     </p>
 
                     <Link
@@ -319,27 +318,27 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 ref={endRef}
                 className={`${isEndInView ? "active" : ""} fadeInMove`}
               >
-                <h1 className="text-3xl text-white font-ovo text-center uppercase">
+                <h1 className="text-3xl text-black font-ovo text-center uppercase">
                   {config.thankyou}
                 </h1>
 
                 <div className="mt-5 mx-auto flex flex-col">
-                  <p className="text-sm font-legan text-white text-center">
+                  <p className="text-sm font-legan text-black text-center">
                     {config.thankyouDetail}
                   </p>
 
-                  <p className="text-sm rounded-full text-center font-ovo mt-5 px-6 py-2 text-white uppercase">
+                  <p className="text-sm rounded-full text-center font-ovo mt-5 px-6 py-2 text-black uppercase">
                     {config.coupleNames}
                   </p>
                 </div>
               </div>
 
-              <footer className="flex flex-col items-center mt-8">
-                <p className="text-[0.5rem] uppercase text-center">
+              <footer className="flex flex-col items-center mt-8 text-black ">
+                <p className="text-[0.5rem] uppercase text-center text-black ">
                   Made from forked free wedding template
                 </p>
 
-                <p className="text-xs">
+                <p className="text-xs text-black">
                   © All rights reserved by the owner
                 </p>
               </footer>
