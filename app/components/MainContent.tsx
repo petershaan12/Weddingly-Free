@@ -100,7 +100,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
       <div
         className="md:flex justify-center hidden items-end pb-12 w-2/3 h-1/2 md:h-full"
         style={{
-          backgroundImage: `url(/foto_1_samping.jpg)`, //refer to base 1st photo
+          backgroundImage: `url(/hero.JPG)`, //refer to base 1st photo
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
