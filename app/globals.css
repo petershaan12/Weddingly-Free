@@ -38,7 +38,7 @@ body {
 #backgroundWedding {
   background-size: cover;
   background-position: center;
-  background-image: url(../public/slide1.1.jpg);
+  background-image: url(../public/slide1.1.JPG);
   background-repeat: no-repeat;
   transition: 5s;
   animation-name: animate;
