@@ -173,7 +173,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
             <div
               className={`text-white h-screen flex pt-12 p-5 px-12 snap-start `}
               style={{
-                backgroundImage: `url(/slide-1.jpg)`,
+                backgroundImage: `url(/slide-1-1.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -236,7 +236,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
             <div
               className="snap-start  text-white h-screen flex flex-col items-center px-12 "
               style={{
-                backgroundImage: `url(/slide-5.jpg)`,
+                backgroundImage: `url(/slide-4.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
