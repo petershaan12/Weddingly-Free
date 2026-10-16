@@ -28,10 +28,23 @@ const ovo = Ovo({
   variable: "--font-ovo",
 });
 
-
 export const metadata: Metadata = {
-  title: `The Wedding of ${config.coupleNames}`
+  title: `The Wedding of ${config.coupleNames}`,
+  description: `Wedding Invitation of ${config.coupleNames}. Join us to celebrate our special day.`,
+  openGraph: {
+    title: `The Wedding of ${config.coupleNames}`,
+    description: `Wedding Invitation of ${config.coupleNames}. Join us to celebrate our special day.`,
+    siteName: `The Wedding of ${config.coupleNames}`,
+    type: "website",
+    url: "https://mikiyas-and-ruhama-wedding.vercel.app/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `The Wedding of ${config.coupleNames}`,
+    description: `Wedding Invitation of ${config.coupleNames}. Join us to celebrate our special day.`,
+  },
 };
+
 
 export default function RootLayout({
   children,
