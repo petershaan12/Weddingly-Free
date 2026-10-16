@@ -232,78 +232,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 <h3 className="font-thesignature text-2xl">{config.brideNickName},</h3>
               </div>
             </div>
-            {/* Slide 4 */}
-            <div
-              className="snap-start  text-white h-screen pt-8 flex px-12 "
-              style={{
-                backgroundImage: `url(/slide-4.jpg)`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div>
-                <h1
-                  ref={slide4Ref}
-                  className={`text-xl md:text-5xl  text-white font-ovo fadeInMove ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  A journey in love
-                </h1>
-                <h3
-                  ref={slide4Ref}
-                  className={`uppercase font-legan text-xl mt-5 mb-2 fadeInMoveSlow ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  {config.timeline_1}
-                </h3>
-                <p
-                  ref={slide4Ref}
-                  className={`text-xs font-legan text-white fadeInLeftSlow ${isSlide4InView ? "active" : ""
-                    }`}
-                >
-                  {config.timeline_1_content}
-                </p>
-                <h3
-                  ref={slide4Ref}
-                  className={`uppercase font-legan text-xl mt-5 mb-2 fadeInMoveSlow ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  {config.timeline_2}
-                </h3>
-                <p
-                  ref={slide4Ref}
-                  className={`text-xs font-legan text-white fadeInLeftSlow ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  {config.timeline_2_content}
-                </p>
-                <h3
-                  ref={slide4Ref}
-                  className={`uppercase font-legan text-xl mt-5 mb-2 fadeInMoveSlow ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  {config.timeline_3}
-                </h3>
-                <p
-                  ref={slide4Ref}
-                  className={`text-xs font-legan text-white fadeInLeftSlow ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  {config.timeline_3_content}
-                </p>
-                <div
-                  ref={slide4Ref}
-                  className={`relative flex items-center mt-5 fadeInLeft ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  <hr className="w-[120px] mx-2 border-t border-gray-300" />
-                  <span className="px-2 font-thesignature text-3xl">
-                    {config.coupleNames}
-                  </span>
-                </div>
-              </div>
-            </div>
-            {/* Slide 5 */}
+            {/* Slide 4*/}
             <div
               className="snap-start  text-white h-screen flex flex-col items-center px-12 "
               style={{
@@ -318,7 +247,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                   }  fadeInMove flex items-center flex-col pt-32 `}
               >
                 <h3 className="uppercase font-legan text-xs tracking-wide mt-5 mb-2">
-                  save our date
+                  save the date
                 </h3>
                 <h1 className="text-2xl w-[200px] text-center text-white  font-ovo uppercase">
                   {new Date(config.eventDate).toLocaleDateString("en-US", {
@@ -333,7 +262,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 {config.weddingReception.enabled && (
                   <div className="mt-5 mx-auto flex  flex-col items-center">
                     <h3 className="uppercase font-ovo text-sm text-center mt-5 mb-2">
-                      Wedding Reception <br /> {config.weddingReception.time}
+                      Wedding Talk <br /> {config.weddingReception.time}
                     </h3>
                     <p className="text-sm text-center  font-legan text-white">
                       {config.weddingReception.place} <br /> {config.weddingReception.place_details}
@@ -370,53 +299,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 <CountdownTimer />
               </div>
             </div>
-            {/* SLIDE 7 */}
-            {config.rsvp.enabled && (
-            <div
-              className="snap-start text-white h-screen flex flex-col justify-center pt-16 pb-16 px-8"
-              style={{
-                backgroundImage: `url(/slide-7.jpg)`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div
-                ref={slide9Ref}
-                className={`${isSlide9InView ? "active" : ""} fadeInMove`}
-              >
-                <h1 className="text-3xl text-white font-ovo text-center uppercase">
-                  RSVP AND WISHES
-                </h1>
-                <p className="text-sm font-legan text-white/80 text-center">
-                {config.rsvp.detail}
-                </p>
-
-                <Form />
-              </div>
-            </div>
-            )}
-
-            {/* SLIDE 8 */}
-            <div
-              className="snap-start text-white h-screen flex flex-col justify-center pt-16 pb-16 px-8"
-              style={{
-                backgroundImage: `url(/slide-8.jpg)`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div
-                ref={slide10Ref}
-                className={`${isSlide10InView ? "active" : ""} fadeInMove`}
-              >
-                <h1 className="text-3xl text-white font-ovo text-center uppercase">
-                  Wishes
-                </h1>
-                <WishesList />
-              </div>
-            </div>
-
-            {/* SLIDE AKHIR */}
+            {/* Thanking Slide */}
             <div
               className="snap-start text-white h-screen flex flex-col justify-end pt-16 pb-16 px-12 "
               style={{
