@@ -162,11 +162,11 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 ref={slide1Ref}
                 className={`${isSlide1InView ? "active" : ""} fadeInMove`}
               >
-                <h1 className="text-xl md:text-2xl font-ovo tracking-wide text-black uppercase">
+                <h1 className="text-xl md:text-2xl font-ovo tracking-wide text-purple uppercase">
                   {config.bibleVerse}
                 </h1>
 
-                <p className="text-sm mt-5 font-legan">
+                <p className="text-sm mt-5 font-legan text-purple">
                   {config.bibleVerseContent}
                 </p>
 
@@ -268,7 +268,6 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                     <p className="text-sm text-center font-legan text-white">
                       {config.weddingReception.place}
                       <br />
-                      {config.weddingReception.place_details}
                     </p>
 
                     <Link
@@ -328,18 +327,18 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                     {config.thankyouDetail}
                   </p>
 
-                  <p className="text-sm rounded-full text-center font-ovo mt-5 px-6 py-2 text-white uppercase">
+                  <p className="text-sm rounded-full text-center font-ovo mt-5 px-6 py-2 text-black uppercase">
                     {config.coupleNames}
                   </p>
                 </div>
               </div>
 
-              <footer className="flex flex-col items-center mt-8">
-                <p className="text-[0.5rem] uppercase text-center">
+              <footer className="flex flex-col items-center mt-8 text-black ">
+                <p className="text-[0.5rem] uppercase text-center text-black ">
                   Made from forked free wedding template
                 </p>
 
-                <p className="text-xs">
+                <p className="text-xs text-black">
                   © All rights reserved by the owner
                 </p>
               </footer>
