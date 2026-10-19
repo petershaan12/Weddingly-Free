@@ -58,7 +58,7 @@ const Form = () => {
           type="text"
           name="name"
           id="name"
-          className="block w-full p-2 mt-1 bg-white/10 text-white border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          className="block w-full p-2 mt-1 bg-white/10 text-white border border-gray-300 rounded-md shadow-xs focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           required
         />
       </div>
@@ -73,7 +73,7 @@ const Form = () => {
         <select
           id="attendance"
           name="attendance"
-          className="block w-full p-2 mt-1 bg-black/40 text-white border border-gray-300 rounded-md shadow-sm  sm:text-sm"
+          className="block w-full p-2 mt-1 bg-black/40 text-white border border-gray-300 rounded-md shadow-xs  sm:text-sm"
           required
         >
           <option value="">Pilih Kehadiran</option>
@@ -92,7 +92,7 @@ const Form = () => {
         <select
           id="guests"
           name="guests"
-          className="block w-full p-2 mt-1  bg-black/40 text-white border border-gray-300 rounded-md shadow-sm  sm:text-sm"
+          className="block w-full p-2 mt-1  bg-black/40 text-white border border-gray-300 rounded-md shadow-xs  sm:text-sm"
           required
         >
           <option value="">Pilih Jumlah Tamu</option>
@@ -114,7 +114,7 @@ const Form = () => {
           id="message"
           name="message"
           rows={4}
-          className="block w-full p-2 mt-1 bg-white/10 text-white border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          className="block w-full p-2 mt-1 bg-white/10 text-white border border-gray-300 rounded-md shadow-xs focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           required
         />
       </div>
@@ -122,7 +122,7 @@ const Form = () => {
       <div>
         <button
           type="submit"
-          className="block w-full p-2 text-sm font-medium text-center text-black bg-white border border-transparent rounded-md shadow-sm"
+          className="block w-full p-2 text-sm font-medium text-center text-black bg-white border border-transparent rounded-md shadow-xs"
           disabled={loading} 
         >
           {loading ? "Submitting..." : "Submit"} 

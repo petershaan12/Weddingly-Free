@@ -1,6 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@utility font-ovo { font-family: var(--font-ovo), serif; }
+@utility font-legan { font-family: var(--font-legan), serif; }
+@utility font-wonder { font-family: var(--font-wonder), sans-serif; }
+@utility font-thesignature { font-family: var(--font-thesignature), serif; }
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --animate-upDown: upDown 1s ease-in-out infinite;
+}
+
+@keyframes upDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Tailwind v3 defaults kept for v4 */
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 :root {
   --background: #ffffff;
