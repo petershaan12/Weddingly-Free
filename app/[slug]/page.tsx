@@ -1,27 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import ScreenStart from "../components/ScreenStart";
 import MainContent from "../components/MainContent";
 
 type ParamsProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
-export default function Home({ params: { slug } }: ParamsProps) {
+export default function Home({ params }: ParamsProps) {
+  const { slug } = use(params);
   const [showContent, setShowContent] = useState(false);
-  const [name, setName] = useState<string>("");
+  const name = slug.startsWith("to%3A") ? decodeURIComponent(slug.slice(5)) : "";
 
   useEffect(() => {
-    console.log('slug:', slug);
-    if (slug.startsWith("to%3A")) {
-      const extractedName = decodeURIComponent(slug.slice(5)).replace(
-        /%20/g,
-        " "
-      );
-      setName(extractedName);
-    }
-
     const contentTimer = setTimeout(() => {
       setShowContent(true);
     }, 7000);

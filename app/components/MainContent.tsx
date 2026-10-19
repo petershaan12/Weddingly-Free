@@ -482,7 +482,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                     ></iframe>
                   </div>
 
-                  <div className="-mt-12 w-72 transform skew-x-6 drop-shadow">
+                  <div className="-mt-12 w-72 transform skew-x-6 drop-shadow-sm">
                     <p className="text-3xl font-thesignature text-white/80 ">
                       {config.prewedding.detail}
                     </p>

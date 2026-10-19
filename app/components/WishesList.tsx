@@ -14,40 +14,42 @@ const WishesList = () => {
   const [wishes, setWishes] = useState<Wish[]>([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [loading, setLoading] = useState(false); // Add loading state
+  const [loading, setLoading] = useState(true); // Add loading state
+  const [reloadKey, setReloadKey] = useState(0);
 
-  const fetchWishes = async (pageNumber: number) => {
-    setLoading(true); // Set loading to true when fetching
-    try {
-      const response = await fetch(`/api/get?page=${pageNumber}&limit=5`);
-      if (!response.ok) {
-        throw new Error(`Error fetching wishes: ${response.statusText}`);
-      }
+  useEffect(() => {
+    fetch(`/api/get?page=${page}&limit=5`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Error fetching wishes: ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setWishes(data.wishes);
+        setTotalPages(data.totalPages);
+      })
+      .catch((error) => console.error("Error fetching wishes:", error))
+      .finally(() => setLoading(false)); // Set loading to false after fetching
+  }, [page, reloadKey]);
 
-      const data = await response.json();
-      setWishes(data.wishes);
-      setTotalPages(data.totalPages);
-    } catch (error) {
-      console.error("Error fetching wishes:", error);
-    } finally {
-      setLoading(false); // Set loading to false after fetching
+  const handleNextPage = () => {
+    if (page < totalPages) {
+      setLoading(true);
+      setPage(page + 1);
     }
   };
 
-  useEffect(() => {
-    fetchWishes(page);
-  }, [page]);
-
-  const handleNextPage = () => {
-    if (page < totalPages) setPage(page + 1);
-  };
-
   const handlePreviousPage = () => {
-    if (page > 1) setPage(page - 1);
+    if (page > 1) {
+      setLoading(true);
+      setPage(page - 1);
+    }
   };
 
   const handleRefresh = () => {
-    fetchWishes(page); // Re-fetch the current page
+    setLoading(true);
+    setReloadKey((k) => k + 1); // Re-fetch the current page
   };
 
   return (
